@@ -1,4 +1,4 @@
-import{
+import {
     SET_STICKERS
 } from './types';
 
@@ -25,10 +25,13 @@ function fetchStickers() {
     ]
 
     const response = {
-        data: {stickers}
+        data: { stickers }
     }
-    return SET_STICKERS,
-    payload: response.data.stickers
+    return {
+
+        type: SET_STICKERS,
+        payload: response.data.stickers
+    }
 }
 
 export { fetchStickers }
